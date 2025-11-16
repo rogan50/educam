@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Computer Studies Hub</title>
+        <link rel="stylesheet" href="../style.css">
+<style>
+
+
+main {
+    margin-top: 120px;
+}
+
+.topic {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.topic p {
+    font-size: 25px;
+    color: #1E40AF;
+}
+
+.topic h1 {
+    color: #F97316;
+}
+
+#quiz {
+
+    background: #f8f9ff;
+    padding: 60px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    width: 700px;
+    margin: auto;
+    height: 600px;
+}
+
+
+#quiz .qstn{
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    text-align: left;
+    color: #0251b8;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    background: #b8c9e2;
+    font-size: 18px;
+    border-radius: 20px;
+     text-align: left;
+    padding-left: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #6093e0;
+    color: white;
+}
+
+#question {
+    margin-bottom: 20px;
+    font-size: 25px;
+    text-align: left;
+}
+
+#nextBtn {
+    background-color: #F97316;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    display: none;
+    width: 90px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.Bt {
+    width: 60px;
+    padding: 6px 0;
+    margin-left: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+     background-color: #F97316;
+     
+    }
+.Bt a{
+     text-decoration: none;
+    color: white;
+    }
+.Bt:hover {
+    background-color: #EA580C;
+    }
+
+progress {
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    margin-bottom: 10px;
+    }
+
+progress::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+progress::-webkit-progress-value {
+    background: #F97316;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+    }
+
+progress::-moz-progress-bar {
+    background: orangered;
+    border-radius: 20px;
+    }
+
+#stepText{
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #0251b8;
+    }
+
+.playbtn{
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    background: #F97316;
+    font-size: 18px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+.playbtn:hover{
+    color: white;
+    background-color: #EA580C;
+}
+
+ @media (max-width: 1920px){
+             #quiz {
+            width: 1500px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+         @media (max-width: 1600px){
+           #quiz {
+            width: 1450px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+         @media (max-width: 1440px){
+            #quiz {
+            width: 1300px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+
+         @media (max-width: 1366px){
+             #quiz {
+            width: 1200px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+
+         @media (max-width: 1280px){
+            #quiz {
+            width: 1050px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+
+       @media (max-width: 1024px){
+            #quiz {
+            width: 950px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+  
+
+     @media (max-width: 768px){
+            #quiz {
+            width: 700px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+         @media (max-width: 600px){
+           #quiz {
+            width: 550px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+         @media (max-width: 580px){
+            #quiz {
+            width: 500px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+         @media (max-width: 540px){
+            #quiz {
+            width: 480px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+         @media (max-width: 500px){
+           #quiz {
+            width: 440px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+        @media (max-width: 480px){
+         #quiz {
+            width: 430px;
+            margin: 20px auto;
+            height: 710px;
+         }
+        }
+
+        @media (max-width: 460px){
+         #quiz{
+            width: 410px;
+            margin: 20px auto;
+            height: 710px;
+         }
+        }
+
+        @media (max-width: 440px){
+         #quiz {
+            width: 390px;
+            margin:20px auto;
+            height: 710px;
+         }
+        }
+
+        @media (max-width: 420px){
+         #quiz{
+            width: 370px;
+            margin: 20px auto;
+            height: 700px;
+
+         }
+        }
+
+        @media (max-width: 400px){
+         #quiz {
+            width: 350px;
+            margin: 20px auto;
+         }
+         #question {
+            font-size: 20px;
+         }
+         .btn {
+         }
+        }
+
+        @media (max-width: 360px){
+         #quiz{
+            width: 320px;
+            margin: 20px auto;
+            height: 700px;
+         }
+         
+         #question {
+            font-size: 20px;
+         }
+         .btn {
+            font-size: 16px;
+         }
+        }
+</style>
+
+</head>
+    <body>
+        <!--navigation bar-->
+        <nav class="navbar">
+            <div class="logo">EduCam</div>
+
+             <div class="search-box">
+                <input type="text" id="searchInput" placeholder="search..">
+                <div class="icon">&#128269;</div>
+                <div id="suggestions" class="suggestions-box"></div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../topics.html">Topics</a></li>
+                <li><a href="../quiz.html" class="active">Quiz</a></li>
+                
+            </ul>
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+        <main class="content">
+    <button class="Bt"><a href="../quiz.html">&lt;Back</a></button>   
+    <div class="topic">
+        <h1>Quiz</h1>
+    <p>Cloud Computing </p>
+    </div>
+    <div id="quiz">
+
+        <!--progress bar-->
+             <progress id="stepProgress" value="1" max="18"></progress>
+        <p id="stepText">Question 1 of 18</p>
+
+        <p class="qstn">Question:</p>
+        <p id="question">Question</p>
+
+        <button class="btn" onclick="checkAnswer('A')">A</button>
+        <button class="btn" onclick="checkAnswer('B')">B</button>
+        <button class="btn" onclick="checkAnswer('C')">C</button>
+        <button class="btn" onclick="checkAnswer('D')">D</button>
+
+        <P id="result"></P>
+
+        <button id="nextBtn" onclick="nextQuestion()">Next</button>
+    
+        </main>
+    
+    
+        <footer>
+            <p>&copy; 2025 Educam | Learn. Practice . Grow 
+                | <a href="about.html">About</a> | <a href="contact.html">Contact</a> |
+                <a href="policy-terms.html">Policy & Terms </a>
+
+            </p>
+        </footer>
+        <script src="../script.js"></script>
+           <script>
+
+let questions = [
+    {
+        question: "What is cloud computing mainly used for?",
+        correct: "B",
+        options: {
+            A: "Cooking food online",
+            B: "Storing and accessing data over the internet",
+            C: "Printing documents from the internet",
+            D: "Sending text messages"
+        }
+    },
+    {
+          question: "In cloud computing, what does IaaS stand for?",
+        correct: "B",
+        options: {
+            A: "Internet as a Service",
+            B: "Infrastructure as a Service",
+            C: "Information as a Service",
+            D: "Internet as a Service"
+        }
+    },
+     {
+         question: "Which of the following is an example of a cloud storage service?",
+        correct: "A",
+        options: {
+            A: "Google Drive",
+            B: "Microsoft Word",
+            C: "VLC Media Player",
+            D: "Adobe Photoshop"
+        }
+    },
+     {
+          question: "Which of the following is not a benefit of cloud computing?",
+        correct: "C",
+        options: {
+            A: "Easy access from anywhere",
+            B: "Reduces cost",
+            C: "Requires physical storage device",
+            D: "Data backup and recovery"
+        }
+    },
+     {
+          question: "Which is the main requirement to use cloud computing?",
+        correct: "B",
+        options: {
+            A: "A modern printer",
+            B: "A stable Internet connection",
+            C: "A scanner",
+            D: "A flash drive"
+        }
+    },
+     {
+        question: "Which of the following companies provides cloud services?",
+        correct: "A",
+        options: {
+            A: "Amazon Web Service (AWS)",
+            B: "Facebook",
+            C: "WhatsApp",
+            D: "TikTok"
+        }
+    },
+     {
+          question: "What type of cloud is used by the general public?",
+        correct: "B",
+        options: {
+            A: "Private Cloud",
+            B: "Public Cloud",
+            C: "Hybrid Cloud",
+            D: "Secure Cloud"
+        }
+    },
+     {
+          question: "Which cloud computing model provides software applications over the Internet?",
+        correct: "B",
+        options: {
+            A: "PaaS",
+            B: "SaaS",
+            C: "IaaS",
+            D: "DaaS"
+        }
+    },
+     {
+         question: "In cloud computing what does PaaS stand for?",
+        correct: "A",
+        options: {
+            A: "Platform as a Service",
+            B: "Processor as a Service",
+            C: "Product as a Service",
+            D: "Program as a Service"
+        }
+    },
+     {
+         question: "Which of the following is an advantage of cloud computing?",
+        correct: "C",
+        options: {
+            A: "Limited storage capacity",
+            B: "High maintenance cost",
+            C: "Scalability and flexibility",
+            D: "Requires offline installation"
+        }
+    },
+     {
+          question: "Which service model lets developers deploy applications without managing the underlying service?",
+        correct: "B",
+        options: {
+            A: "IaaS",
+            B: "PaaS",
+            C: "SaaS",
+            D: "DaaS"
+        }
+    },
+     {
+          question: "What does SaaS stand for?",
+        correct: "B",
+        options: {
+            A: "System as a Service",
+            B: "Software as a System",
+            C: "Storage as a System",
+            D: "Security as a System"
+        }
+    },
+     {
+          question: "Which is an example of a SaaS?",
+        correct: "C",
+        options: {
+            A: "Microsoft Excel installed from a CD (old offline version)",
+            B: "A virtual machine you rent and configure",
+            C: "Google Docs (online editor)",
+            D: "A local hard drive"
+        }
+    },
+     {
+          question: "A hybrid cloud is best described as?",
+        correct: "B",
+        options: {
+            A: "Only public cloud resources",
+            B: "A combination of public and private cloud resources",
+            C: "A cloud with no internet access",
+            D: "Cloud storage on a USB drive"
+        }
+    },
+    {
+          question: "Which term describes adding more rsources (CPU, memory) to a cloud server when needed",
+        correct: "B",
+        options: {
+            A: "Migration",
+            B: "Scalability",
+            C: "Archiving",
+            D: "Compression"
+        }
+    },
+    {
+          question: "Which common security practice in cloud computing?",
+        correct: "B",
+        options: {
+            A: "Sharing passwords in email",
+            B: "Using strong passwords and multi-factor authentication",
+            C: "Leaving ports open to the public",
+            D: "Disabling updates forever"
+        }
+    },
+    {
+      question: "Which of these is a disadvantage of cloud computing?",
+        correct: "B",
+        options: {
+            A: "On-demand resource availability",
+            B: "Dependency on Internet connectivity",
+            C: "Easier collaboration",
+            D: "Automatic software updates"
+        }
+    },
+    {
+          question: "What does multitenancy mean in cloud computing?",
+        correct: "B",
+        options: {
+            A: "One user per server only",
+            B: "Multiple user share the same applications or infrastructure while keeping data separate",
+            C: "Each user must buy their own physical server",
+            D: "Running tenants in a house"
+        }
+    },
+    
+];
+
+let current = 0;
+let score = 0;
+
+//show first question
+showQuestion();
+
+function showQuestion() {
+    let q = questions[current];
+
+    document.getElementById("question").innerText = q.question;
+
+    //show answer texts inside buttons
+    let buttons =
+    document.getElementsByClassName("btn");
+    buttons[0].innerText = "A. " +
+    q.options.A;
+     buttons[1].innerText = "B. " +
+    q.options.B;
+     buttons[2].innerText = "C. " +
+    q.options.C;
+     buttons[3].innerText = "D. " +
+    q.options.D;
+
+    document.getElementById("result").innerText = "";
+
+    document.getElementById("nextBtn").style.display = "none";
+}
+
+//check if answer is correct
+function checkAnswer(answer) {
+    let correct =
+    questions[current].correct;
+    if (answer === correct) {
+
+        document.getElementById("result").innerHTML = "Correct &#10004; &#128515;";
+        document.getElementById("result").style.color = "#16A34A";
+        document.getElementById("result").style.textAlign = "center";
+        document.getElementById("result").style.fontSize = "25px";
+        score++;
+} else {
+    document.getElementById("result").innerHTML = "Wrong &#10060; &#128532;";
+    document.getElementById("result").style.color = "#DC2626";
+    document.getElementById("result").style.textAlign = "center";
+    document.getElementById("result").style.fontSize = "25px";
+}
+
+document.getElementById("nextBtn").style.display = "block";
+}
+//show next question
+function nextQuestion() {
+    current++;
+    if (current < questions.length) {
+        showQuestion();
+    } else {
+        document.getElementById("quiz").innerHTML = 
+        "<h2 style='text-align: center; font-size: 25px;'>You scored " + score + " out of " + questions.length + "!</h2>" + "<button onclick='restartQuiz()' class='playbtn'>Play Again</button>";
+
+    }
+}
+
+//restart quiz function
+function restartQuiz() {
+    current = 0;
+    score = 0;
+
+    //reset the quiz HTML back to original layout
+
+    document.getElementById("quiz").innerHTML = `
+
+         <progress id="stepProgress" value="1" max="18"></progress>
+        <p id="stepText">Question 1 of 18</p>
+
+    <p id="question">Question</p>
+
+        <button class="btn" onclick="checkAnswer('A')">A</button>
+        <button class="btn" onclick="checkAnswer('B')">B</button>
+        <button class="btn" onclick="checkAnswer('C')">C</button>
+        <button class="btn" onclick="checkAnswer('D')">D</button>
+
+        <P id="result"></P>
+
+        <button id="nextBtn" onclick="nextQuestion()">Next</button>`;
+
+        //show the first question again
+        showQuestion();
+}
+
+
+    </script>
+
+     </script>
+     <script>
+            const stepProgress = document.getElementById("stepProgress");
+            const stepText = document.getElementById("stepText");
+            const nextBtn = document.getElementById("nextBtn");
+
+            nextBtn.addEventListener('click', () => {
+                if(stepProgress.value < stepProgress.max) {
+                    stepProgress.value++;
+                    stepText.textContent = `Question ${stepProgress.value} of ${stepProgress.max}`;
+                }
+            });
+        </script>
+    </body>
+</html>

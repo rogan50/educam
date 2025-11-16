@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Computer Studies Hub</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+
+            main{
+               margin-top: 100px; 
+            }
+
+            section P {
+                text-align: center;
+            }
+
+            .content .topics-header h1{
+                text-align: center;
+                color: #1E40AF;
+                font-size: 30px;
+            }
+
+            .content .topics-header p {
+                font-size: 18px;
+                margin-left: 20px;
+                margin-top: 5px;
+                
+            }
+
+            .topic-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 15px;
+                padding: 40px;
+                max-width: 1100px;
+                margin: 0 auto 60px;
+            }
+
+            .topic-card{
+                background: white;
+                padding: 25px 30px;
+                border-radius: 12px;
+                box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+                transition: all 0.3s ease;
+
+            }
+
+            .topic-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            }
+
+            .topic-card h2 {
+                color: #1E40AF;
+                margin-bottom: 10px;
+                font-size: 1.3em;
+            }
+
+            .subtopics {
+                margin-bottom: 15px;
+                padding-left: 20px;
+            }
+
+            .subtopics li {
+                list-style: square;
+                line-height: 1.6em;
+            }
+
+            .btn {
+                text-decoration: none;
+                background: #F97316;
+                color: white;
+                padding: 10px 18px;
+                border-radius: 18px;
+                font-weight: bold;
+                transition: all 0.3s ease;
+                animation: pulse 2s infinite;
+                box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            }
+
+            .btn:hover {
+                background: #EA580C;
+                transform: scale(1.05);
+            }
+
+            /*pulse animation*/
+            @keyframes pulse {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.05);}
+            100% {transform: scale(1);}
+            }
+
+            @media (max-width: 360px){
+              .topic-card{
+                margin-right: 30px;
+            }
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <!--navigation bar-->
+        <nav class="navbar">
+            <div class="logo">EduCam</div>
+
+
+             <div class="search-box">
+                <input type="text" id="searchInput" placeholder="search topic...">
+                <div class="icon">&#128269;</div>
+                <div id="suggestions" class="suggestions-box"></div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topics.html" class="active">Topics</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                
+                
+            </ul>
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+        <main class="content">
+       <section class="topics-header">
+        <h1>Computer Studies Lessons</h1>
+        <p>Click on any topic below to start learning</p>
+       </section>
+
+       <!--Topic list-->
+       <section class="topic-list">
+        <!--topic 1-->
+        <article class="topic-card">
+            
+            <h2>Introduction to Computer</h2>
+            <ul class="subtopics">
+                <li>Definition of Computer</li>
+                <li>History of Computers</li>
+                <li>Characteristics of a Computer</li>
+            </ul>
+            <a href="lessons/introduction-notes.html" class="btn">View Lesson</a>
+        </article>
+
+        <article class="topic-card">
+            
+            <h2>Generation of computers</h2>
+            <ul class="subtopics">
+                <li>First Generation(1940-1956)</li>
+                <li>Second Generation (1956-1963)</li>
+                <li>Third Generation (1964-1971)</li>
+                <li>Fourth Generation (1971-present)</li>
+                <li>Fifth Generation (Present and future): Artificial intelligence(AI) computers</li>
+            </ul>
+            <a href="lessons/generation-notes.html" class="btn">View Lesson</a>
+        </article>
+
+
+        <!--topic 2-->
+        <article class="topic-card">
+            <h2>Components of a Computer System</h2>
+             <ul class="subtopics">
+                <li>Hardware</li>
+                <li>Software</li>
+                <li>Peopleware</li>
+            </ul>
+            <a href="lessons/computer-system-notes.html" class="btn">View Lesson</a>
+        </article>
+
+        <!--topic 3-->
+        <article class="topic-card">
+           <h2>Computer Hardware</h2>
+            <ul class="subtopics">
+                <li>Input Devices</li>
+                <li>Output Devices</li>
+                <li>Storage Devices</li>
+            </ul>
+            <a href="lessons/hardware-notes.html" class="btn">View Lesson</a>
+        </article>
+
+         <article class="topic-card">
+           <h2>Types of computers</h2>
+            <ul class="subtopics">
+                <li>Base on purpose</li>
+                <li>Base on size, power and performance</li>
+                
+            </ul>
+            <a href="lessons/types-of-computer-notes.html" class="btn">View Lesson</a>
+        </article>
+
+        <article class="topic-card">
+           <h2>Computer Software</h2>
+            <ul class="subtopics">
+                <li>System Software</li>
+                <li>Application Software</li>
+                <li>Utility Software</li>
+            </ul>
+            <a href="lessons/types-of-software-notes.html" class="btn">View Lesson</a>
+        </article>
+
+ <article class="topic-card">
+           <h2>Number System</h2>
+            <ul class="subtopics">
+                <li>Introduction</li>
+                <li>Type of number system</li>
+                <li>Conversion Between Number System</li>
+                <li>Why computer use Number System</li>
+                <li>Application of Number System</li>
+                
+            </ul>
+            <a href="lessons/number_notes.html" class="btn">View Lesson</a>
+        </article>
+
+
+        <!--topic 5-->
+        <article class="topic-card">
+           <h2>Computer Networks</h2>
+            <ul class="subtopics">
+                <li>Definition of Network</li>
+                <li>Types of Network</li>
+                <li>Network Devices</li>
+                <li>Client-Server Network</li>
+                <li>Peer-To-Peer Network</li>
+            </ul>
+            <a href="lessons/network-notes.html" class="btn">View Lesson</a>
+        </article>
+
+        <article class="topic-card">
+           <h2>Operating System</h2>
+            <ul class="subtopics">
+                <li>Definition of Operating system</li>
+                <li>Types of Operating System</li>
+                <li>Components of Operating System</li>
+                <li>Advantages and Disadvantages</li>
+            </ul>
+            <a href="lessons/operating-system-notes.html" class="btn">View Lesson</a>
+        </article>
+
+         <article class="topic-card">
+           <h2>Boolean Algebra</h2>
+            <ul class="subtopics">
+                <li>Definition</li>
+                <li>Boolean Operators (AND, OR, NOT,NAND, NOR, XOR)</li>
+                <li>Boolean Laws and Rules</li>
+                <li>Boolean Expression</li>
+                <li>Logic Gate</li>
+                <li>Application of Boolean Algebra</li>
+            </ul>
+            <a href="lessons/boolean-algebra-notes.html" class="btn">View Lesson</a>
+        </article>
+
+         <article class="topic-card">
+           <h2>Computer Architecture</h2>
+            <ul class="subtopics">
+                <li>Definition</li>
+                <li>Main Components of computer Architecture</li>
+                <li>Von Neumann Architecture</li>
+                <li>Flow of data in Computer Architecture</li>
+                <li>Difference between Computer Architecture and Computer Computer Organization</li>
+            </ul>
+            <a href="lessons/architecture-notes.html" class="btn">View Lesson</a>
+        </article>
+
+         <article class="topic-card">
+           <h2>System Development Life Cycle (SDLC)</h2>
+            <ul class="subtopics">
+                <li>Definition</li>
+                <li>Importance of SDLC</li>
+                <li>Phases/Stages of the SDLC</li>
+            </ul>
+            <a href="lessons/sdlc-notes.html" class="btn">View Lesson</a>
+        </article>
+
+
+        <article class="topic-card">
+           <h2>Computer Memory</h2>
+            <ul class="subtopics">
+                <li>Definition</li>
+                <li>Functions of Computer Memory</li>
+                <li>Types of Computer Memory</li>
+                <li>Importance of Computer Memory</li>
+            </ul>
+            <a href="lessons/computer-memory-notes.html" class="btn">View Lesson</a>
+        </article>
+
+        <article class="topic-card">
+           <h2>Project Management</h2>
+            <ul class="subtopics">
+                <li>Definition</li>
+                <li>Importance of Project Management</li>
+                <li>Stages of Project Management (Project Life Cycle)</li>
+                <li>Role of a Project Manager</li>
+                <li>Tools Used in Project Management</li>
+                <li>Project Management Constraints</li>
+            </ul>
+            <a href="lessons/project-notes.html" class="btn">View Lesson</a>
+        </article>
+
+
+        <article class="topic-card">
+           <h2>Robotics and Embedded Systems</h2>
+            <ul class="subtopics">
+                <li>Definition</li>
+                <li>Robots</li>
+                <li>Artificial Intelligence (AI) in Robotics</li>
+                <li>Embedded System</li>
+                <li>Relationship Between Robotics and Embedded Systems</li>
+            </ul>
+            <a href="lessons/robotics-artificial-notes.html" class="btn">View Lesson</a>
+        </article>
+
+        <!--topic 6-->
+        <article class="topic-card">
+           <h2>Internet and It's Uses</h2>
+            <ul class="subtopics">
+                <li>Definition of Internet</li>
+                <li>Internet Services</li>
+                <li>Advantages and Disadvantages</li>
+            </ul>
+            <a href="lessons/internet-notes.html" class="btn">View Lesson</a>
+        </article>
+
+        <!--topic 7-->
+        <article class="topic-card">
+           <h2>Computer Security</h2>
+            <ul class="subtopics">
+                <li>Threats to Computer</li>
+                <li>Antivirus and Firewalls</li>
+                <li>Safe Internet Practices</li>
+            </ul>
+            <a href="lessons/computer-security-notes.html" class="btn">View Lesson</a>
+        </article>
+
+        <article class="topic-card">
+           <h2>
+            Data Structure
+           </h2>
+            <ul class="subtopics">
+                <li>Types of data structure (Array, Stack, Queue, Linked List, Tree, Graph, File, Record)</li>
+            </ul>
+            <a href="lessons/data-structure-notes.html" class="btn">View Lesson</a>
+        </article>
+
+        <article class="topic-card">
+           <h2>Database</h2>
+            <ul class="subtopics">
+                <li>What is a Database</li>
+                <li>Key Terms in Database</li>
+                <li>Types of Database</li>
+                <li>Advantages of Database</li>
+                <li>Disadvantages of Database</li>
+                <li>Keys in a Database</li>
+                <li>Relationships in Database</li>
+                <li>DBMS vs RDBMS</li>
+                <li>SQL (structural Query Language)</li>
+                <li>Normalization</li>
+                <li>Applications of Database</li>
+            </ul>
+            <a href="lessons/database-notes.html" class="btn">View Lesson</a>
+        </article>
+
+        <article class="topic-card">
+           <h2>Computer Ethics</h2>
+            <ul class="subtopics">
+                <li>Importance of Computer Ethics</li>
+                <li>Examples of Unethical Computer Practice</li>
+                <li>Computer Maintenance</li>
+                <li>Computer Care and safety Tips</li>
+            </ul>
+            <a href="lessons/computer-ethics-notes.html" class="btn">View Lesson</a>
+        </article>
+
+        <article class="topic-card">
+           <h2>Computer in Education</h2>
+            <ul class="subtopics">
+                <li>Computer in healthcare</li>
+                <li>Computer in Banking and Finance</li>
+                <li>Computer in Business</li>
+                <li>Computer in Transport and Communication</li>
+                <li>Computer in Government and Security</li>
+            </ul>
+            <a href="lessons/computer-in-education-notes.html" class="btn">View Lesson</a>
+        </article>
+
+        <article class="topic-card">
+           <h2>Digital System Design</h2>
+            <ul class="subtopics">
+                <li>Number System</li>
+                <li>Binary code</li>
+                <li>Digital Arithmetic</li>
+                <li>Logic Gate</li>
+                <li>Boolean Algebra</li>
+                <li>Sequential and Combinational circuit</li>
+            </ul>
+            <a href="lessons/digital-system-notes.html" class="btn">View Lesson</a>
+        </article>
+
+        <article class="topic-card">
+           <h2>Computer Programming</h2>
+            <h2>Algorithm</h2>
+            
+            <a href="lessons/programming-notes.html" class="btn">View Lesson</a>
+        </article>
+
+        <article class="topic-card">
+           <h2>Cloud Computing</h2>
+           <ul class="subtopics">
+            <li>Definition</li>
+            <li>Types of cloud Computing Services</li>
+            <li>Cloud Deployment Models</li>
+            <li>Applications of Cloud Computing</li>
+            <li>Seurity in Cloud Computing</li>
+           </ul>
+            <a href="lessons/cloud-computing-notes.html" class="btn">View Lesson</a>
+        </article>
+
+        <article class="topic-card">
+           <h2>Information Systems</h2>
+           <ul class="subtopics">
+            <li>Definition</li>
+            <li>Components of information system</li>
+            <li>Difference Between Data and Informations</li>
+            <li>Functions of Information system</li>
+            <li>Types of Information System</li>
+            <li>Importance of Information System</li>
+            <li>Limitations of Information System</li>
+           </ul>
+            <a href="lessons/information-notes.html" class="btn">View Lesson</a>
+        </article>
+       </section>
+        </main>
+    
+       <footer>
+            <p>&copy; 2025 Educam | Learn. Practice . Grow 
+                | <a href="about.html">About</a> | <a href="contact.html">Contact</a> |
+                <a href="policy-terms.html">Policy & Terms </a>
+
+            </p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Computer Studies Hub</title>
+        <link rel="stylesheet" href="../style.css">
+<style>
+
+
+main {
+    margin-top: 120px;
+}
+
+.topic {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.topic p {
+    font-size: 25px;
+    color: #1E40AF;
+}
+
+.topic h1 {
+    color: #F97316;
+}
+
+#quiz {
+
+    background: #f8f9ff;
+    padding: 60px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    width: 700px;
+    margin: auto;
+    height: 600px;
+}
+
+
+#quiz .qstn{
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    text-align: left;
+    color: #0251b8;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    background: #b8c9e2;
+    font-size: 18px;
+    border-radius: 20px;
+     text-align: left;
+    padding-left: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #6093e0;
+    color: white;
+}
+
+#question {
+    margin-bottom: 20px;
+    font-size: 25px;
+    text-align: left;
+}
+
+#nextBtn {
+    background-color: #F97316;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    display: none;
+    width: 90px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.Bt {
+    width: 60px;
+    padding: 6px 0;
+    margin-left: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+     background-color: #F97316;
+     
+    }
+.Bt a{
+     text-decoration: none;
+    color: white;
+    }
+.Bt:hover {
+    background-color: #EA580C;
+    }
+
+progress {
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    margin-bottom: 10px;
+    }
+
+progress::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+progress::-webkit-progress-value {
+    background: #F97316;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+    }
+
+progress::-moz-progress-bar {
+    background: orangered;
+    border-radius: 20px;
+    }
+
+#stepText{
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #0251b8;
+    }
+
+.playbtn{
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    background: #F97316;
+    font-size: 18px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+.playbtn:hover{
+    color: white;
+    background-color: #EA580C;
+}
+
+ @media (max-width: 1920px){
+             #quiz {
+            width: 1500px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+         @media (max-width: 1600px){
+           #quiz {
+            width: 1450px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+         @media (max-width: 1440px){
+            #quiz {
+            width: 1300px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+
+         @media (max-width: 1366px){
+             #quiz {
+            width: 1200px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+
+         @media (max-width: 1280px){
+            #quiz {
+            width: 1050px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+
+       @media (max-width: 1024px){
+            #quiz {
+            width: 950px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+  
+
+     @media (max-width: 768px){
+            #quiz {
+            width: 700px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+         @media (max-width: 600px){
+           #quiz {
+            width: 550px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+         @media (max-width: 580px){
+            #quiz {
+            width: 500px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+         @media (max-width: 540px){
+            #quiz {
+            width: 480px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+         @media (max-width: 500px){
+           #quiz {
+            width: 440px;
+            margin: 20px auto;
+            height: 710px;
+         }
+         }
+
+        @media (max-width: 480px){
+         #quiz {
+            width: 430px;
+            margin: 20px auto;
+            height: 710px;
+         }
+        }
+
+        @media (max-width: 460px){
+         #quiz{
+            width: 410px;
+            margin: 20px auto;
+            height: 710px;
+         }
+        }
+
+        @media (max-width: 440px){
+         #quiz {
+            width: 390px;
+            margin:20px auto;
+            height: 710px;
+         }
+        }
+
+        @media (max-width: 420px){
+         #quiz{
+            width: 370px;
+            margin: 20px auto;
+            height: 700px;
+
+         }
+        }
+
+        @media (max-width: 400px){
+         #quiz {
+            width: 350px;
+            margin: 20px auto;
+         }
+         #question {
+            font-size: 20px;
+         }
+         .btn {
+         }
+        }
+
+        @media (max-width: 360px){
+         #quiz{
+            width: 320px;
+            margin: 20px auto;
+            height: 700px;
+         }
+         
+         #question {
+            font-size: 20px;
+         }
+         .btn {
+            font-size: 16px;
+         }
+        }
+</style>
+
+</head>
+    <body>
+        <!--navigation bar-->
+        <nav class="navbar">
+            <div class="logo">EduCam</div>
+
+             <div class="search-box">
+                <input type="text" id="searchInput" placeholder="search topic...">
+                <div class="icon">&#128269;</div>
+                <div id="suggestions" class="suggestions-box"></div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../topics.html">Topics</a></li>
+                <li><a href="../quiz.html" class="active">Quiz</a></li>
+                
+            </ul>
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+        <main class="content">
+    <button class="Bt"><a href="../quiz.html">&lt;Back</a></button>   
+    <div class="topic">
+        <h1>Quiz</h1>
+    <p>Introduction to Computer</p>
+    </div>
+    <div id="quiz">
+
+        <!--progress bar-->
+             <progress id="stepProgress" value="1" max="14"></progress>
+        <p id="stepText">Question 1 of 14</p>
+
+        <p class="qstn">Question:</p>
+        <p id="question">Question</p>
+
+        <button class="btn" onclick="checkAnswer('A')">A</button>
+        <button class="btn" onclick="checkAnswer('B')">B</button>
+        <button class="btn" onclick="checkAnswer('C')">C</button>
+        <button class="btn" onclick="checkAnswer('D')">D</button>
+
+        <P id="result"></P>
+
+        <button id="nextBtn" onclick="nextQuestion()">Next</button>
+    
+        </main>
+    
+    
+        <footer>
+            <p>&copy; 2025 Educam | Learn. Practice . Grow 
+                | <a href="about.html">About</a> | <a href="contact.html">Contact</a> |
+                <a href="policy-terms.html">Policy & Terms </a>
+
+            </p>
+        </footer>
+        <script src="../script.js"></script>
+           <script>
+
+let questions = [
+    {
+          question: "What is computer memory?",
+        correct: "B",
+        options: {
+            A: "The part of a computer that performs calculations",
+            B: "The part that stores data and instructions",
+            C: "The part that connect input and output devices",
+            D: "The part that display images on screen"
+        }
+    },
+    {
+          question: "Which of the following is not a type of computer memory?",
+        correct: "C",
+        options: {
+            A: "RAM",
+            B: "ROM",
+            C: "CPU",
+            D: "Cache"
+        }
+    },
+     {
+          question: "Memory that loses its content when the computer is turned off is called?",
+        correct: "B",
+        options: {
+            A: "Non-volatile memory",
+            B: "Volatile memory",
+            C: "Permanent memory",
+            D: "Optical memory"
+        }
+    },
+     {
+         question: "Which of the example is an example of primary memory?",
+        correct: "C",
+        options: {
+            A: "Hard disk",
+            B: "Pen disk",
+            C: "RAM",
+            D: "CD-ROM"
+        }
+    },
+     {
+         question: "Which of the following is an example of secondary memory?",
+        correct: "C",
+        options: {
+            A: "ROM",
+            B: "Cache memory",
+            C: "Hard disk",
+            D: "Register"
+        }
+    },
+     {
+         question: "What does ROM stand for?",
+        correct: "A",
+        options: {
+            A: "Read Only Memory",
+            B: "Random Output Memory",
+            C: "Read Only Module",
+            D: "Read Online Memory"
+        }
+    },
+     {
+          question: "what does RAM stand for?",
+        correct: "B",
+        options: {
+            A: "Read Access Memory",
+            B: "Randon Access Memory",
+            C: "Read And Modify",
+            D: "Tapid Access Module"
+        }
+    },
+     {
+          question: "Which type of memory is used to store data permanently?",
+        correct: "A",
+        options: {
+            A: "ROM",
+            B: "RAM",
+            C: "Cache memory",
+            D: "Register"
+        }
+    },
+     {
+         question: "The memory use to temporarily hold frequently used data and instructions for faster access is called?",
+        correct: "B",
+        options: {
+            A: "Virtual memory",
+            B: "Cache memory",
+            C: "Flash memory",
+            D: "External memory"
+        }
+    },
+     {
+         question: "The smallest unit of memory is a?",
+        correct: "B",
+        options: {
+            A: "Byte",
+            B: "Bit",
+            C: "Word",
+            D: "Character"
+        }
+    },
+     {
+         question: "One byte is equal to?",
+        correct: "D",
+        options: {
+            A: "2 bits",
+            B: "4 bits",
+            C: "6 bits",
+            D: "8 bits"
+        }
+    },
+     {
+          question: "Which of the following is true about secondary memory?",
+        correct: "B",
+        options: {
+            A: "It is temporary",
+            B: "It is slower but has larger storage capacity",
+            C: "It is faster but smaller",
+            D: "It stores only instructions"
+        }
+    },
+     {
+          question: "Which type  of ROM can be erased and rewritten using ultraviolet light?",
+        correct: "C",
+        options: {
+            A: "PROM",
+            B: "EPROM",
+            C: "EEPROM",
+            D: "Mask ROM"
+        }
+    },
+     {
+          question: "Which of the following correctly lists the memory hierarchy from fastest to slowest?",
+        correct: "A",
+        options: {
+            A: "Cache - RAM - Hard Disk",
+            B: "RAM - Cache - Hard Disk",
+            C: "Hard Disk - RAM - Cache",
+            D: "Hard Disk - Cache - RAM"
+        }
+    },
+    
+];
+
+let current = 0;
+let score = 0;
+
+//show first question
+showQuestion();
+
+function showQuestion() {
+    let q = questions[current];
+
+    document.getElementById("question").innerText = q.question;
+
+    //show answer texts inside buttons
+    let buttons =
+    document.getElementsByClassName("btn");
+    buttons[0].innerText = "A. " +
+    q.options.A;
+     buttons[1].innerText = "B. " +
+    q.options.B;
+     buttons[2].innerText = "C. " +
+    q.options.C;
+     buttons[3].innerText = "D. " +
+    q.options.D;
+
+    document.getElementById("result").innerText = "";
+
+    document.getElementById("nextBtn").style.display = "none";
+}
+
+//check if answer is correct
+function checkAnswer(answer) {
+    let correct =
+    questions[current].correct;
+    if (answer === correct) {
+
+        document.getElementById("result").innerHTML = "Correct &#10004; &#128515;";
+        document.getElementById("result").style.color = "#16A34A";
+        document.getElementById("result").style.textAlign = "center";
+        document.getElementById("result").style.fontSize = "25px";
+        score++;
+} else {
+    document.getElementById("result").innerHTML = "Wrong &#10060; &#128532;";
+    document.getElementById("result").style.color = "#DC2626";
+    document.getElementById("result").style.textAlign = "center";
+    document.getElementById("result").style.fontSize = "25px";
+}
+
+document.getElementById("nextBtn").style.display = "block";
+}
+//show next question
+function nextQuestion() {
+    current++;
+    if (current < questions.length) {
+        showQuestion();
+    } else {
+        document.getElementById("quiz").innerHTML = 
+        "<h2 style='text-align: center; font-size: 25px;'>You scored " + score + " out of " + questions.length + "!</h2>" + "<button onclick='restartQuiz()' class='playbtn'>Play Again</button>";
+
+    }
+}
+
+//restart quiz function
+function restartQuiz() {
+    current = 0;
+    score = 0;
+
+    //reset the quiz HTML back to original layout
+
+    document.getElementById("quiz").innerHTML = `
+         <progress id="stepProgress" value="1" max="14"></progress>
+        <p id="stepText">Question 1 of 14</p>
+    <p id="question">Question</p>
+
+        <button class="btn" onclick="checkAnswer('A')">A</button>
+        <button class="btn" onclick="checkAnswer('B')">B</button>
+        <button class="btn" onclick="checkAnswer('C')">C</button>
+        <button class="btn" onclick="checkAnswer('D')">D</button>
+
+        <P id="result"></P>
+
+        <button id="nextBtn" onclick="nextQuestion()">Next</button>`;
+
+        //show the first question again
+        showQuestion();
+}
+
+
+    </script>
+
+     </script>
+     <script>
+            const stepProgress = document.getElementById("stepProgress");
+            const stepText = document.getElementById("stepText");
+            const nextBtn = document.getElementById("nextBtn");
+
+            nextBtn.addEventListener('click', () => {
+                if(stepProgress.value < stepProgress.max) {
+                    stepProgress.value++;
+                    stepText.textContent = `Question ${stepProgress.value} of ${stepProgress.max}`;
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,757 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+display: flex;
+flex-direction: column;
+color: #1F2937;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E40AF;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100px;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+
+.icon {
+    position: absolute;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 10px 5px 10px;
+    
+}
+ 
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+
+.nav-links li a:hover{
+color: #F97316;
+}
+
+ nav ul li a.active {
+    color: #F97316;
+}
+
+.search-box{
+    position: relative;
+    width: 300px;
+}
+
+#searchInput{
+    width: 100%;
+    padding: 6px 35px 6px 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    border-color: none;
+}
+
+.suggestions-box{
+    position: absolute;
+    top: 58px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 1000;
+}
+
+.suggestions-box div {
+    padding: 8px;
+    cursor: pointer;
+    color: #004aad;
+}
+
+.suggestions-box div:hover {
+    background-color: #004aad;
+    color: white;
+}
+
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.banner {
+    width: 100%;
+    height: 250px;
+    background: url('pictures/typsp1-1740.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    
+}
+
+.banner-overly{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    
+}
+
+.banner-overly h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease forwards;
+    color: white;
+}
+
+.banner-overly p {
+    font-size: 1.1em;
+    animation: fadeInUp 1.2s ease forwards;
+}
+.content {
+    flex: 1;
+}
+
+.hero-section {
+    background:  url('pictures/mimi-thian-vdXMSiX-n6M-unsplash.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+    width: 95%;
+    margin: auto;
+    margin-top: 9px;
+}
+
+.hero-section .overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px 50px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.hero-section h2{
+    font-size: 1.9em;
+    
+}
+
+.hero-section h2 span {
+    color: #F97316;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-section .btn {
+    text-decoration: none;
+    color: white;
+    background-color: #F97316;
+    padding: 12px 25px;
+    border-radius: 18px;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+}
+
+.hero-section .btn:hover{
+    background-color: #EA580C;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.quiz-section {
+    background-color: #f8f9ff;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+    width: 95%;
+    margin: auto;
+    margin-top: 9px;
+}
+
+.quiz-section .overlay{
+    
+    padding: 50px 50px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+
+.quiz-section h2{
+    font-size: 40px;
+    color: #ff6b00;
+    
+}
+.quiz-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.quiz-section .quiz .btn {
+    text-decoration: none;
+    color: white;
+    background-color: #F97316;
+    padding: 12px 60px;
+    border-radius: 18px;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+
+}
+
+.quiz-section .btn:hover{
+    background-color: #EA580C;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+footer p{
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer a {
+    color: #F97316;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover{
+    color: #EA580C;
+}
+
+
+/*btn animation*/
+@keyframes pulse {
+0% {transform: scale(1);}
+50% {transform: scale(1.05);}
+100% {transform: scale(1);}
+}
+
+/*Banner animation*/
+@keyframes fadeInDown {
+    from {opacity: 0; transform: translateY(-30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+footer {
+    background-color: #004aad;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.95em;
+    margin-top: 100px;
+}
+
+
+
+ @media (max-width: 1920px){
+        .banner-overly{
+            width: 1600px;
+        }
+        .hero-section{
+            width: 700px;
+        }
+        .hero-section .overlay{
+            width: 1600px;
+        }
+        .quiz-section{
+            width: 1700px;
+        }
+         }
+
+         @media (max-width: 1600px){
+           .banner-overly{
+            width: 1350px;
+        }
+        .hero-section{
+            width: 1400px;
+        }
+        .hero-section .overlay{
+            width: 1350px;
+        }
+        .quiz-section{
+            width: 1400px;
+            text-align: center;
+        }
+         }
+
+         @media (max-width: 1440px){
+          .banner-overly{
+            width: 1200px;
+        }
+        .hero-section{
+            width: 1300px;
+        }
+        .hero-section .overlay{
+            width: 1200px;
+        }
+        .quiz-section{
+            width: 1300px;
+            text-align: center;
+        }
+         }
+
+
+         @media (max-width: 1366px){
+         .banner-overly{
+            width: 1150px;
+        }
+        .hero-section{
+            width: 1200px;
+        }
+        .hero-section .overlay{
+            width: 1150px;
+        }
+        .quiz-section{
+            width: 1200px;
+            text-align: center;
+        }
+         }
+
+
+         @media (max-width: 1280px){
+            .banner-overly{
+            width: 950px;
+        }
+        .hero-section{
+            width: 1100px;
+        }
+        .hero-section .overlay{
+            width: 960px;
+        }
+        .quiz-section{
+            width: 1100px;
+            text-align: center;
+        }
+         }
+
+
+       @media (max-width: 1024px){
+           .banner-overly{
+            width: 800px;
+        }
+        .hero-section{
+            width: 900px;
+        }
+        .hero-section .overlay{
+            width: 800px;
+        }
+        .quiz-section{
+            width: 900px;
+            text-align: center;
+        }
+         }
+  
+
+     @media (max-width: 768px){
+          .nav-links {
+        position: absolute;
+        top: 25px;
+        background-color: #004aad;
+        right: 0;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        text-align: center;
+        padding: 15px;
+
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links.show {
+        display: flex;
+        margin-top: 40px;
+    }
+
+    .search-box{
+    width: 220px;
+}
+
+.icon {
+    position: absolute;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 10px 5px 15px;
+    
+}
+
+.banner-overly{
+            width: 650px;
+        }
+        .hero-section{
+            width: 680px;
+        }
+        .hero-section .overlay{
+            width: 650px;
+        }
+        .quiz-section{
+            width: 680px;
+            text-align: center;
+        }
+  
+}
+
+@media (max-width: 600px){
+    .banner-overly{
+            width: 530px;
+        }
+        .hero-section{
+            width: 540px;
+        }
+        .hero-section .overlay{
+            width: 520px;
+        }
+        .quiz-section{
+            width: 540px;
+            text-align: center;
+        }
+}
+
+         @media (max-width: 580px){
+           .banner-overly{
+            width: 480px;
+        }
+        .hero-section{
+            width: 490px;
+        }
+        .hero-section .overlay{
+            width: 475px;
+        }
+        .quiz-section{
+            width: 490px;
+        }
+         }
+
+         @media (max-width: 540px){
+          .banner-overly{
+            width: 455px;
+        }
+        .hero-section{
+            width: 465px;
+        }
+        .hero-section .overlay{
+            width: 445px;
+        }
+        .quiz-section{
+            width: 465px;
+        }
+         }
+
+         @media (max-width: 500px){
+         .banner-overly{
+            width: 425px;
+        }
+        .hero-section{
+            width: 450px;
+        }
+        .hero-section .overlay{
+            width: 420px;
+        }
+        .quiz-section{
+            width: 450px;
+            text-align: center;
+        }
+         }
+
+
+@media (max-width: 480px){
+
+.search-box{
+    width: 150px;
+}
+
+#searchInput{
+    width: 100%;
+    padding: 5px 25px 5px 5px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    border-color: none;
+}
+
+.banner-overly {
+        width: 400px;
+        margin-top: 40px;
+
+    }
+
+    .banner-overly h2 {
+        font-size: 25px;
+    }
+.banner-overly p {
+    font-size: 16px;
+}
+
+    .hero-section {
+    margin-top: 10px;
+    width: 430px;
+
+    
+    }
+
+    .hero-section .overlay{
+    padding: 30px 30px;
+    width: 400px;
+}
+
+.hero-section h2{
+    font-size: 24px;
+    
+}
+
+.hero-section p {
+    font-size: 16px;
+}
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+.hero-section .btn {
+    padding: 8px 16px;
+
+}
+
+.section {
+    width: 430px;
+}
+
+.section .overlay{
+    padding: 50px 50px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+
+.section h2{
+    font-size: 40px;
+    color: #ff6b00;
+    
+}
+.section p {
+    font-size: 16px;
+}
+
+.section .btn {
+    padding: 8px 40px;
+}
+
+ .quiz-section{
+    width: 430px;
+    height: 300px;
+   }
+
+   .quiz {
+    text-align: center;
+   }
+   .quiz h2 {
+    font-size: 30px;
+   }
+   .quiz p {
+    margin-left: 10px;
+   }
+
+   .quiz-section .quiz .btn {
+   padding: 9px 60px;
+    
+}
+
+}
+
+        @media (max-width: 460px){
+        .banner-overly{
+            width: 410px;
+        }
+        .hero-section{
+            width: 420px;
+        }
+        .hero-section .overlay{
+            width: 390px;
+        }
+        .quiz-section{
+            width: 420px;
+        }
+        }
+
+        @media (max-width: 440px){
+         .banner-overly{
+            width: 395px;
+         }
+         .hero-section {
+            width: 390px;
+         }
+         .hero-section .overlay{
+            width: 385px;
+         }
+         .quiz-section {
+            width: 390px;
+         }
+        }
+
+        @media (max-width: 420px){
+            #seachInput{
+                font-size: 14px;
+            }
+         .banner-overly{
+            width: 370px;
+            }
+
+        .hero-section{
+            width: 370px;
+        }
+        .hero-section .overlay {
+            width: 360px;
+        }
+        .quiz-section{
+            width: 370px;
+        }
+        }
+
+
+@media (max-width: 400px) {
+    #searchInput {
+        width: 90%;
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
+    .hero-section {
+        width: 350px;
+    }
+
+    .banner-overly{
+        width: 350px;
+    }
+
+    .hero-section .overlay {
+        width: 340px;
+    }
+    .quiz-section{
+        width: 350px;
+    }
+}
+
+
+
+@media (max-width: 360px) {
+    #searchInput{
+    width: 80%;
+    padding: 5px 25px 5px 5px;
+    border-radius: 6px;
+    border: none;
+    font-size: 12px;
+    border-color: none;
+    margin-left: 16px;
+}
+
+.icon {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 10px 5px 15px;
+}
+
+.logo{
+    font-size: 28px;
+}
+
+   .banner-overly{
+    width: 330px;
+    margin-top: 18px;
+   } 
+
+   .hero-section {
+    width: 335px;
+   }
+   .hero-section .overlay {
+    width: 325px;
+    margin-left: ;
+   }
+
+   .quiz-section{
+    width: 330px;
+    height: 300px;
+   }
+
+   .quiz {
+    text-align: center;
+   }
+   .quiz h2 {
+    font-size: 30px;
+   }
+   .quiz p {
+    margin-left: 10px;
+   }
+
+   .quiz-section .quiz .btn {
+   padding: 9px 60px;
+    
+}
+}
+
